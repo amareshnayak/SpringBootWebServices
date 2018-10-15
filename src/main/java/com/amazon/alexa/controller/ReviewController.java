@@ -33,11 +33,11 @@ public class ReviewController {
     }
     
     
-    @RequestMapping(value="/search",params="store_type", method = RequestMethod.GET)
+    @RequestMapping(value="/search",params="review_source", method = RequestMethod.GET)
     @ResponseBody
-    public Iterable<Review> getReviewDetailsByStoreType(@RequestParam String store_type) {
-    	System.out.println("-------------------------"+store_type);
-      return reviewService.filterByStoreType(store_type);
+    public Iterable<Review> getReviewDetailsByStoreType(@RequestParam String review_source) {
+    	System.out.println("-------------------------"+review_source);
+      return reviewService.filterByStoreType(review_source);
     }
     
     @RequestMapping(value="/search",params="rating", method = RequestMethod.GET)

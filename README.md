@@ -1,4 +1,3 @@
-# SpringBootWebServices
 ## Alexa Json Parser
 
 Please find the below prerequisite to run the application
@@ -14,13 +13,17 @@ For the above requirement i used postgresql as database to store the content of 
 clone the source code to IDE.May be you can use STS as IDE and run the appliction.Its based on mvc design pattern. after successfully running the application you can test the get api in postman or ARC or browser also.
 
 Please find the below API.
-##Get all the records/without any filter: http://localhost:8080/api/review/search
+##Get all the records/without any filter:
+ http://localhost:8080/api/review/search
 
 ##filter by review date:
 http://localhost:8080/api/review/search?review_date=2018-02-26
 
-##filter by ratings:http://localhost:8080/api/review/search?rating=4
+##filter by ratings:
+http://localhost:8080/api/review/search?rating=4
 
 ##filter by store_type:
-http://localhost:8080/api/review/search?store_type=GooglePlayStore
+http://localhost:8080/api/review/search?review_source=GooglePlayStore
+
+http://localhost:8080/api/review/search?review_source=iTunes
 

@@ -66,11 +66,11 @@ public class ReviewControllerTest extends ApplicationTest {
 	
 	@Test
 	public void testSeviceFilterByStoretype() throws Exception {
-		mockMvc.perform(get("/api/review/search?store_type=GooglePlayStore")).andExpect(status().isOk())
-				.andExpect(content().contentType("application/json;charset=UTF-8")).andExpect(jsonPath("$.[0].id", is(1)))
+		mockMvc.perform(get("/api/review/search?review_source=GooglePlayStore")).andExpect(status().isOk())
+				.andExpect(content().contentType("application/json;charset=UTF-8")).andExpect(jsonPath("$.[0].id", is(2)))
 				.andExpect(jsonPath("$.[0].review_source", is("GooglePlayStore")))
 				.andExpect(jsonPath("$.*", hasSize(1)))
-				.andExpect(content().string(org.hamcrest.Matchers.containsString("iTunes")));
+				.andExpect(content().string(org.hamcrest.Matchers.containsString("GooglePlayStore")));
 			
 	}
 }
